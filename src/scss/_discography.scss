@@ -1,8 +1,22 @@
 .card-title {
-  // maybe make this font the heavier version; would have to download again
   font-family: 'Cinzel', serif;
+  font-weight: bold;
 }
 
 .card-text {
   color: black;
+  font-style: italic;
+}
+
+.discography-header {
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 4.5rem;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  color: black;
+  font-size: 1.50rem;
 }

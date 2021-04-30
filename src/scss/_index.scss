@@ -1,9 +1,17 @@
 .index-members-photos, .index-bullet-img {
-  max-width: 20%;
+  max-width: 30%;
 }
 
 .index-members {
   // change this later, it's just here for padding stuff in the future //
   border: $secondary-color solid groove 3px;
   margin-bottom: 5px;
+}
+
+.index-members-name {
+  font-family: 'Cinzel', serif;
+}
+
+.band-description-index {
+  font-size: .75rem;
 }

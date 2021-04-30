@@ -14,14 +14,15 @@
         <img src="../img/members/{{ slug }}-bw.jpg" alt="{{ name }}" class="img-fluid">
       </div>
       <div class="member-description col-sm-12 col-md-12 col-lg-6">
-        <!-- description loop on right -->
+        <div class="text-center">
         <!-- need to write classes, etc. for styles on repeated classifications -->
-        <h1>{{ name }}</h1>
+        <h1 class="baked-member-name">{{ name }}</h1>
         <p>Tenure: {{ tenure }}</p>
         <p>Instruments: {{ instruments }}</p>
         <p>Birthplace: {{ birthplace }}</p>
         <p>Birthdate: {{ birthdate }}</p>
-        <p>{{ description | safe }}
+        </div>
+        <p>{{ description | safe }}</p>
       </div>
     </div>
   </article>

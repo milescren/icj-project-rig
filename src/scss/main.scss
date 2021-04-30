@@ -36,9 +36,27 @@ body {
 
 h4 {
   font-family: 'Cinzel', serif;
+  font-style: italic;
+  font-weight: bold;
   color: $secondary-color;
 }
 
 p {
   color: $secondary-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+.baked-member-name {
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  color: #dc4027;
+}
+
+a:link {
+  color: #dc4027;
+}
+
+a:visited {
+  color:#dc4027;
+  text-decoration: none;
 }

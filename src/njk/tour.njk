@@ -1,0 +1,22 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Tour{% endblock %}
+
+{% block page_description %}View Queen's 2021 tour dates.{% endblock %}
+
+{% block content %}
+<div class="container">
+<img src="../img/queen-logo-white.png" class="img-fluid" alt="Responsive image">
+
+<!-- center this later -->
+<h1>TOUR 2021</h1>
+
+  <ul class="list-group tour-dates">
+    {% for tour2021 in queen.tour2021 %}
+    <li class="list-group-item">{{ tour2021.city }} | {{ tour2021.date }}
+    <br>{{ tour2021.venue }}<br><button type="button" class="btn btn-light">TICKETS</button></li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

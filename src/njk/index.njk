@@ -1,30 +1,57 @@
 {% extends '_templates/base.njk' %}
 
-{% block page_title %}Index page title{% endblock %}
+{% block page_title %}Index{% endblock %}
 
-{% block page_description %}The index search description for this page goes here.{% endblock %}
+{% block page_description %}Learn about the band Queen.{% endblock %}
 
 {% block content %}
+{% include "_includes/jumbotron.njk" %}
+
 <div class="container">
-  <h1>Main headline here</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-  <h2>Library books loop</h2>
-  <p>This loops through data that came from a Google Docs example.</p>
   <div class="row">
-    {% for book in library.books %}
-      <div class="col">
-        <img src="img/{{ book.slug }}.jpg" alt="" class="img-fluid">
-        <h3><a href="books/{{ book.slug }}.html">{{ book.title }}</a></h3>
+  <!-- can i center this at everything before lg and then add extra top and bottom padding at lg to center it alongside the media objects -->
+    <div class="site-description col-sm-12 col-md-12 col-lg-6">
+      <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury, Brian May, Roger Taylor  and John Deacon. Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
+
+      <p>Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in February 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularise the music video format.</p>
+
+      <p>The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions", which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium rock bands in the world. "Another One Bites the Dust" from The Game (1980) became their best-selling single, while their 1981 compilation album Greatest Hits is the best-selling album in the UK and is certified nine times platinum in the US. Their performance at the 1985 Live Aid concert is ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at Knebworth, England. In 1991, he died of bronchopneumonia—a complication of AIDS—and Deacon retired in 1997. Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert.
+      <!-- make this smaller -->
+      <br>- Source: <a href="https://en.wikipedia.org/wiki/Queen_(band)">Wikipedia</a></p>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="media">
+        <img class="align-self-start mr-3 index-bullet-img" src="../img/queen-logo-white.png" alt="members image">
+        <div class="media-body">
+          <h4 class="mt-0">Members</h4>
+          <ul class="list-unstyled">
+            {% for members in queen.members %}
+            <li class="media index-members">
+              <img class="index-members-photos mr-3 img-fluid" src="../img/members/{{ members.slug }}-bw.jpg" alt="{{ members.name }}">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><a href="members/{{ members.slug }}.html">{{ members.name }}</a></h5>
+                <p>{{ members.instruments }}</p>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
-    {% endfor %}
+      <div class="media">
+        <img class="align-self-start mr-3 index-bullet-img" src="../img/queen-logo-white.png" alt="discography image">
+        <div class="media-body">
+          <h4 class="mt-0">Discography</h4>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+        </div>
+      </div>
+      <div class="media">
+        <img class="align-self-start mr-3 index-bullet-img" src="../img/queen-logo-white.png" alt="tour image">
+        <div class="media-body">
+          <h4 class="mt-0">Tour</h4>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <h2>Bookstores loop</h2>
-  <p>This loops through data that came from a Google Sheet example.</p>
-  <hr>
-  {% for store in bookstores.stores %}
-    <h3><a href="{{ store.url }}" target="_blank">{{ store.name }}</a></h3>
-    <p>{{ store.address}}, {{ store.city }}, {{ store.state }} {{ store.zip }}</p>
-    <hr>
-  {% endfor %}
 </div>
 {% endblock %}

@@ -1,5 +1,14 @@
-/* nav */
-
 .navbar {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.navbar-brand {
+  font-family: 'Cinzel', serif;
+  font-size: 1.75rem;
+}
+
+.navbar-custom {
+  background-color: $primary-color;
 }

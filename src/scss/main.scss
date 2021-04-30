@@ -19,8 +19,26 @@
 // @import "../../node_modules/bootstrap/scss/mixins"; 
 
 // Import partials
-@import "nav";
 
-h3 {
-  font-size: 1.5rem;
+$primary-color: #0d0c11;
+$secondary-color: #fcfcfc;
+
+body {
+  background-color: $primary-color;
+}
+
+@import "nav";
+@import "jumbotron";
+@import "index";
+@import "discography";
+@import "tour";
+@import "footer";
+
+h4 {
+  font-family: 'Cinzel', serif;
+  color: $secondary-color;
+}
+
+p {
+  color: $secondary-color;
 }

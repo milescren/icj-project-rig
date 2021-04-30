@@ -1,116 +1,131 @@
 <!doctype html>
 <html lang="en">
-  <!-- A Intro to Coding for Journalists class project -->
   <head>
-    <title>Index page title</title>
-    <meta name="description" content="The index search description for this page goes here.">
+    <title>Queen | Index</title>
+    <meta name="description" content="Learn about the band Queen.">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="index.html">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <!-- make "Queen" a google font -->
+  <a class="navbar-brand" href="index.html">Queen</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Library books
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <!-- something needs to change here so the dropdown goes under members, not queen -->
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Members
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          
-          <a class="dropdown-item" href="books/the-clown.html">The Clown</a>
-          
-          <a class="dropdown-item" href="books/the-shipping-news.html">The Shipping News</a>
-          
-          <a class="dropdown-item" href="books/the-hearing-trumpet.html">The Hearing Trumpet</a>
-          
+          <!-- gotta change smth here so you can click on another member from the dropdown while on a member page (currently routes to /members/members/..., so it breaks) -->
+          <a class="dropdown-item" href="members/freddie-mercury.html">Freddie Mercury</a>
+          <a class="dropdown-item" href="members/brian-may.html">Brian May</a>
+          <a class="dropdown-item" href="members/roger-taylor.html">Roger Taylor</a>
+          <a class="dropdown-item" href="members/john-deacon.html">John Deacon</a>
         </div>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="discography.html">Discography</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="tour.html">Tour</a>
       </li>
     </ul>
   </div>
 </nav>
 
+
     
+<div class="jumbotron banner jumbotron-fluid text-center">
+    <!-- can change the image out with the commented out stuff in the jumbotron includes -->
+    <img src="../img/queen-logo-white.png" class="img-fluid" alt="Responsive image">
+</div>
+
+
 <div class="container">
-  <h1>Main headline here</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-  <h2>Library books loop</h2>
-  <p>This loops through data that came from a Google Docs example.</p>
   <div class="row">
-    
-      <div class="col">
-        <img src="img/the-clown.jpg" alt="" class="img-fluid">
-        <h3><a href="books/the-clown.html">The Clown</a></h3>
+  <!-- can i center this at everything before lg and then add extra top and bottom padding at lg to center it alongside the media objects -->
+    <div class="site-description col-sm-12 col-md-12 col-lg-6">
+      <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury, Brian May, Roger Taylor  and John Deacon. Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock.</p>
+
+      <p>Before forming Queen, May and Taylor had played together in the band Smile. Mercury was a fan of Smile and encouraged them to experiment with more elaborate stage and recording techniques. He joined in 1970 and suggested the name "Queen". Deacon was recruited in February 1971, before the band released their eponymous debut album in 1973. Queen first charted in the UK with their second album, Queen II, in 1974. Sheer Heart Attack later that year and A Night at the Opera in 1975 brought them international success. The latter featured "Bohemian Rhapsody", which stayed at number one in the UK for nine weeks and helped popularise the music video format.</p>
+
+      <p>The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions", which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium rock bands in the world. "Another One Bites the Dust" from The Game (1980) became their best-selling single, while their 1981 compilation album Greatest Hits is the best-selling album in the UK and is certified nine times platinum in the US. Their performance at the 1985 Live Aid concert is ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at Knebworth, England. In 1991, he died of bronchopneumonia—a complication of AIDS—and Deacon retired in 1997. Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert.
+      <!-- make this smaller -->
+      <br>- Source: <a href="https://en.wikipedia.org/wiki/Queen_(band)">Wikipedia</a></p>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6">
+      <div class="media">
+        <img class="align-self-start mr-3 index-bullet-img" src="../img/queen-logo-white.png" alt="members image">
+        <div class="media-body">
+          <h4 class="mt-0">Members</h4>
+          <ul class="list-unstyled">
+            
+            <li class="media index-members">
+              <img class="index-members-photos mr-3 img-fluid" src="../img/members/freddie-mercury-bw.jpg" alt="Freddie Mercury">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><a href="members/freddie-mercury.html">Freddie Mercury</a></h5>
+                <p>Vocals, keyboards</p>
+              </div>
+            </li>
+            
+            <li class="media index-members">
+              <img class="index-members-photos mr-3 img-fluid" src="../img/members/brian-may-bw.jpg" alt="Brian May">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><a href="members/brian-may.html">Brian May</a></h5>
+                <p>Guitar, keyboards, vocals</p>
+              </div>
+            </li>
+            
+            <li class="media index-members">
+              <img class="index-members-photos mr-3 img-fluid" src="../img/members/roger-taylor-bw.jpg" alt="Roger Taylor">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><a href="members/roger-taylor.html">Roger Taylor</a></h5>
+                <p>Drums, guitar, keyboards, vocals</p>
+              </div>
+            </li>
+            
+            <li class="media index-members">
+              <img class="index-members-photos mr-3 img-fluid" src="../img/members/john-deacon-bw.jpg" alt="John Deacon">
+              <div class="media-body">
+                <h5 class="mt-0 mb-1"><a href="members/john-deacon.html">John Deacon</a></h5>
+                <p>Bass, guitar, keyboards</p>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
       </div>
-    
-      <div class="col">
-        <img src="img/the-shipping-news.jpg" alt="" class="img-fluid">
-        <h3><a href="books/the-shipping-news.html">The Shipping News</a></h3>
+      <div class="media">
+        <img class="align-self-start mr-3 index-bullet-img" src="../img/queen-logo-white.png" alt="discography image">
+        <div class="media-body">
+          <h4 class="mt-0">Discography</h4>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+        </div>
       </div>
-    
-      <div class="col">
-        <img src="img/the-hearing-trumpet.jpg" alt="" class="img-fluid">
-        <h3><a href="books/the-hearing-trumpet.html">The Hearing Trumpet</a></h3>
+      <div class="media">
+        <img class="align-self-start mr-3 index-bullet-img" src="../img/queen-logo-white.png" alt="tour image">
+        <div class="media-body">
+          <h4 class="mt-0">Tour</h4>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+        </div>
       </div>
-    
+    </div>
   </div>
-  <h2>Bookstores loop</h2>
-  <p>This loops through data that came from a Google Sheet example.</p>
-  <hr>
-  
-    <h3><a href="https://www.bookpeople.com/" target="_blank">BookPeople</a></h3>
-    <p>603 N Lamar Blvd, Austin, TX 78703</p>
-    <hr>
-  
-    <h3><a href="https://www.resistenciabooks.com/" target="_blank">Resistencia Bookstore</a></h3>
-    <p>2000 Thrasher Ln, Austin, TX 78741</p>
-    <hr>
-  
-    <h3><a href="http://malvernbooks.com/" target="_blank">Malvern Books</a></h3>
-    <p>613 W 29th St, Austin, TX 78705</p>
-    <hr>
-  
-    <h3><a href="https://www.monkeywrenchbooks.org/" target="_blank">Monkeywrench Books</a></h3>
-    <p>110 N Loop Blvd E, Austin, TX 78751</p>
-    <hr>
-  
-    <h3><a href="https://www.facebook.com/bravenewbookstore/" target="_blank">Brave New Books</a></h3>
-    <p>1904 Guadalupe St # B, Austin, TX 78705</p>
-    <hr>
-  
-    <h3><a href="https://www.ebookwoman.com/" target="_blank">BookWoman</a></h3>
-    <p>5501 N Lamar Blvd, Austin, TX 78751</p>
-    <hr>
-  
-    <h3><a href="https://balconesbooks.com/" target="_blank">Balcones Books</a></h3>
-    <p>5430, 3313 Hancock Dr, Austin, TX 78731</p>
-    <hr>
-  
-    <h3><a href="http://library.austintexas.gov/recycled-reads" target="_blank">Recycled Reads</a></h3>
-    <p>5335 Burnet Rd, Austin, TX 78756</p>
-    <hr>
-  
-    <h3><a href="https://southcongressbooks.com/" target="_blank">South Congress Books</a></h3>
-    <p>1608 S Congress Ave, Austin, TX 78704</p>
-    <hr>
-  
-    <h3><a href="https://www.12thstreetbooks.com/" target="_blank">12th Street Books</a></h3>
-    <p>827 W 12th St, Austin, TX 78701</p>
-    <hr>
-  
 </div>
 
 
     <footer>
 <p id="legal" class="center-block text-center">
-  <small>&copy; <span class="copyright-year"></span>
-  A class project by First Last.
-</p>
+  <small> Queen &copy; <span class="copyright-year"></span><br>A 2021 class project by Miles Crenwelge</p>
 </footer>
 
 

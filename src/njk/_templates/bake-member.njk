@@ -1,0 +1,28 @@
+{% extends '_templates/base.njk' %}
+
+{% set relative_path = "../" %}
+
+{% block page_title %}{{ name }}{% endblock %}
+
+{% block page_description %}Learn about {{ name }}: {{ instruments }} of Queen.{% endblock %}
+
+{% block content %}
+  <article class="container">
+    <div class="row">
+      <div class="member-image col-sm-12 col-md-12 col-lg-6">
+        <!-- need to change the OG size of these images... too big on all platforms right now -->
+        <img src="../img/members/{{ slug }}-bw.jpg" alt="{{ name }}" class="img-fluid">
+      </div>
+      <div class="member-description col-sm-12 col-md-12 col-lg-6">
+        <!-- description loop on right -->
+        <!-- need to write classes, etc. for styles on repeated classifications -->
+        <h1>{{ name }}</h1>
+        <p>Tenure: {{ tenure }}</p>
+        <p>Instruments: {{ instruments }}</p>
+        <p>Birthplace: {{ birthplace }}</p>
+        <p>Birthdate: {{ birthdate }}</p>
+        <p>{{ description | safe }}
+      </div>
+    </div>
+  </article>
+{% endblock %}

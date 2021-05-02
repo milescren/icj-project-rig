@@ -33,6 +33,7 @@ body {
 @import "discography";
 @import "tour";
 @import "footer";
+@import "bake-member";
 
 h4 {
   font-family: 'Cinzel', serif;
@@ -41,7 +42,7 @@ h4 {
   color: $secondary-color;
 }
 
-p {
+p, small {
   color: $secondary-color;
   font-family: 'Roboto', sans-serif;
 }
@@ -59,4 +60,13 @@ a:link {
 a:visited {
   color:#dc4027;
   text-decoration: none;
+}
+
+.instruments-members {
+  padding-bottom: 15px;
+  color: $secondary-color;
+}
+
+.member-page, .tour-page, .discography-page {
+  padding-top: 20px;
 }

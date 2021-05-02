@@ -1,9 +1,33 @@
 .tour-dates {
   text-align: center;
+  padding-top: 80px;
 }
 
 .tour-header {
   font-size: 6.5rem;
   font-weight: bold;
   font-family: 'Cinzel', serif;
+  margin: 0px;
+}
+
+.tour-city {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tour-venue {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.35rem;
+}
+
+.tour-date {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+}
+
+.tour-tickets {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: bold;
 }

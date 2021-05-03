@@ -9,13 +9,13 @@
 {% block content %}
   <article class="container member-page">
     <div class="row">
-      <div class="member-image col-sm-12 col-md-12 col-lg-6">
-        <!-- need to change the OG size of these images... too big on all platforms right now -->
+      <!-- fix the sm size of the images according to crit's comments -->
+      <!-- figure out why there's a member-image class here... -->
+      <div class="member-image col-md-12 col-lg-6">
         <img src="../img/members/{{ slug }}-bw.jpg" alt="{{ name }}" class="img-fluid">
       </div>
-      <div class="member-description col-sm-12 col-md-12 col-lg-6">
+      <div class="member-description col-md-12 col-lg-6">
         <div class="text-center">
-        <!-- need to write classes, etc. for styles on repeated classifications -->
         <h1 class="baked-member-name">{{ name }}</h1>
         <p class="instruments-members" style="font-style:italic">{{ instruments }}</p>
         <p>Tenure: {{ tenure }}</p>

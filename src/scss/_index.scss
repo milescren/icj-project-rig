@@ -17,11 +17,12 @@
 
 h2 {
   font-family: 'Cinzel', serif;
-  color: #dc4027;
+  color: $tertiary-color;
 }
 
 .site-description {
   font-size: 19px;
+  padding-bottom: 40px;
 }
 
 .discography-teaser, .tour-teaser {

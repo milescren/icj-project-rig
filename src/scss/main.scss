@@ -22,6 +22,7 @@
 
 $primary-color: #0d0c11;
 $secondary-color: #fcfcfc;
+$tertiary-color: #dc4027;
 
 body {
   background-color: $primary-color;
@@ -50,15 +51,15 @@ p, small {
 .baked-member-name {
   font-family: 'Cinzel', serif;
   font-weight: bold;
-  color: #dc4027;
+  color: $tertiary-color;
 }
 
 a:link {
-  color: #dc4027;
+  color: $tertiary-color;
 }
 
 a:visited {
-  color:#dc4027;
+  color: $tertiary-color;
   text-decoration: none;
 }
 

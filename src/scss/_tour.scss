@@ -7,6 +7,7 @@
   font-size: 6.5rem;
   font-family: 'Cinzel', serif;
   margin: 0px;
+  line-height: 100px;
 }
 
 .tour-city {
@@ -33,6 +34,6 @@
 
 .btn-tickets {
   color: $primary-color;
-  background-color: #dc4027;
-  border-color: #dc4027;
+  background-color: $tertiary-color;
+  border-color: $tertiary-color;
 }

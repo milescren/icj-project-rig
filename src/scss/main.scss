@@ -1,32 +1,8 @@
-// Custom variable overrides
-// See node_modules/bootstrap/scss/_variables.scss
-
-// $body-bg: black;
-// $body-color: white;
-// $link-hover-color: grey;
-// $font-family-sans-serif: "Helvetica Neue";
-
-/* bootstrap */
-// Option A: Include all of Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
-
-// Option B: Include parts of Bootstrap
-// See https://getbootstrap.com/docs/4.1/getting-started/theming/#importing
-
-// Required
-// @import "../../node_modules/bootstrap/scss/functions";
-// @import "../../node_modules/bootstrap/scss/variables";
-// @import "../../node_modules/bootstrap/scss/mixins"; 
-
-// Import partials
 
 $primary-color: #0d0c11;
 $secondary-color: #fcfcfc;
 $tertiary-color: #dc4027;
-
-body {
-  background-color: $primary-color;
-}
 
 @import "nav";
 @import "jumbotron";
@@ -35,6 +11,10 @@ body {
 @import "tour";
 @import "footer";
 @import "bake-member";
+
+body {
+  background-color: $primary-color;
+}
 
 h4 {
   font-family: 'Cinzel', serif;
